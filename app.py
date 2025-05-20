@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Import routes from scripts
-from scripts import chatbot, disaesePrediction, fitness, insurance, pillRemainder, report
+from scripts import chatbot, disaesePrediction, fitness, insurance, pillRemainder, report, pillIdentifier
 
 # Register routes
 chatbot.register_routes(app)
@@ -20,6 +20,7 @@ fitness.register_routes(app)
 insurance.register_routes(app)
 pillRemainder.register_routes(app)
 report.register_routes(app)
+pillIdentifier.register_routes(app)
 
 # Add a root route for testing
 @app.route('/')
